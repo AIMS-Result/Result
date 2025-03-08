@@ -1,3 +1,0 @@
-101	Naman	B.sc.(CS)	2	80	89	98	94
-102	Shyam	B.sc.(CS)	2	85	87	89	69
-103	Lucky	B.sc.(CS)	2	75	79	96	78
