@@ -28,15 +28,18 @@
                 if (studentData) {
                     const dataArray = studentData.split('\t');
                     resultDiv.innerHTML = `
-                        <h2>Data for Roll No: ${dataArray[0]}</h2>
-                        <p>Name: ${dataArray[1]}</p>
-                       <p>Class: ${dataArray[2]}</p>
-                        <p>Year: ${dataArray[3]}</p>
-                        <p>Subject 1: ${dataArray[4]}</p>
-			            <p>Subject 2: ${dataArray[5]}</p>
-			            <p>Subject 3: ${dataArray[6]}</p>
-		            	<p>Subject 4: ${dataArray[7]}</p>
-                    `;
+                        <h2><table>
+			<tr>
+   				<td>Data for Roll No: ${dataArray[0]}</h2></td>
+                        <td><p>Name: ${dataArray[1]}</p></td>
+                       <td><p>Class: ${dataArray[2]}</p>
+                        <td><p>Year: ${dataArray[3]}</p>
+                        <tr>
+			<td><p>Subject 1: ${dataArray[4]}</p>
+			   <td>         <p>Subject 2: ${dataArray[5]}</p>
+			      <td>      <p>Subject 3: ${dataArray[6]}</p>
+		            	<td><p>Subject 4: ${dataArray[7]}</p>
+                    </table>`;
                 } else {
                     resultDiv.innerHTML = '<p>No data found for this roll number.</p>';
                 }
