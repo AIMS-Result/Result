@@ -6,7 +6,7 @@
     <title>Retrieve Student Data</title>
 </head>
 <body>
-    <center><h1>Retrieve Student Data</h1>
+    <center><h1>AIMS RESULT</h1>
     <input type="text" id="rollNo" placeholder="Enter Roll No" />
     <button onclick="retrieveData()">Get Data</button></center>
     <div id="result"></div>
@@ -28,7 +28,8 @@
                 if (studentData) {
                     const dataArray = studentData.split('\t');
                     resultDiv.innerHTML = `
-                        <table border="5">
+                        <BR><BR><BR><BR>
+			<center><table border="5">
 			<tr>
    			<td><h2>Roll No: ${dataArray[0]}</h2></td>
                         <td>Name: ${dataArray[1]}</td>
@@ -47,7 +48,7 @@
 	  		<tr>
 	  		<td>Subject 4: <td>${dataArray[7]}
         		</tr>            
-		    </table>`;
+		    </table><center>`;
                 } else {
                     resultDiv.innerHTML = '<p>No data found for this roll number.</p>';
                 }
