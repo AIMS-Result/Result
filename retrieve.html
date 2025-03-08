@@ -28,27 +28,52 @@
                 if (studentData) {
                     const dataArray = studentData.split('\t');
                     resultDiv.innerHTML = `
-                        <BR><BR><BR><BR>
-			<center><table border="5">
-			<tr>
-   			<td><h2>Roll No: ${dataArray[0]}</h2></td>
-                        <td>Name: ${dataArray[1]}</td>
-                        <td>Class: ${dataArray[2]}</td>
-                        <td>Year: ${dataArray[3]}</td>
-                        </tr>
-			<tr>
-			<td>Subject 1: <td>${dataArray[4]}
-   			</tr>
-      			<tr>
-			<td>Subject 2: <td>${dataArray[5]}
-   			</tr>
-      			<tr>
-			<td>Subject 3: <td>${dataArray[6]}
-		        </tr>
-	  		<tr>
-	  		<td>Subject 4: <td>${dataArray[7]}
-        		</tr>            
-		    </table><center>`;
+                        <TABLE BORDER="5">
+<TR>
+	<TD>STUDENT NAME: </TD> <TD> ${dataArray[0]}</TD>
+	<TD>FATHER'S NAME: </TD> <TD> ${dataArray[1]}</TD>
+</TR>
+<TR>
+	<TD>ROLL NO.: </TD> <TD> ${dataArray[2]}</TD>
+	<TD>CLASS: </TD> <TD> ${dataArray[3]}</TD>
+</TR>
+<TR>
+	<TD> </TD> <TD> </TD>
+	<TD> </TD> <TD> </TD>
+</TR>
+<TR>
+	<TD>SUBJECT </TD> <TD> TOTAL MARKS </TD> <TD> MARKS OBTAINED </TD>
+</TR>
+<TR>
+	<TD>${dataArray[4]} </TD> <TD> ${dataArray[5]} </TD> <TD> ${dataArray[6]}  </TD>
+</TR>
+<TR>
+	<TD>${dataArray[7]} </TD> <TD> ${dataArray[8]} </TD> <TD> ${dataArray[9]} </TD>
+</TR>
+<TR>
+	<TD>${dataArray[10]} </TD> <TD> ${dataArray[11]} </TD> <TD> ${dataArray[12]} </TD>
+</TR>
+<TR>
+	<TD>${dataArray[13]} </TD> <TD> ${dataArray[14]} </TD> <TD> ${dataArray[15]} </TD>
+</TR>
+<TR>
+	<TD>${dataArray[16]} </TD> <TD> ${dataArray[17]} </TD> <TD> ${dataArray[18]} </TD>
+</TR>
+<TR>
+	<TD>${dataArray[19]} </TD> <TD> ${dataArray[20]} </TD> <TD> ${dataArray[21]} </TD>
+</TR>
+<TR>
+	<TD>${dataArray[22]} </TD> <TD> ${dataArray[23]} </TD> <TD> ${dataArray[24]} </TD>
+</TR>
+<TR>
+	<TD>${dataArray[25]} </TD> <TD> ${dataArray[26]} </TD> <TD> ${dataArray[27]} </TD>
+</TR>
+<TR>
+	<TD>${dataArray[28]} </TD> <TD> ${dataArray[29]} </TD> <TD> ${dataArray[30]} </TD>
+</TR>
+</TABLE>
+<h3> RESULT : ${dataArray[31]} </h3>
+`;
                 } else {
                     resultDiv.innerHTML = '<p>No data found for this roll number.</p>';
                 }
