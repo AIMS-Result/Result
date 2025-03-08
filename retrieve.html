@@ -6,9 +6,9 @@
     <title>Retrieve Student Data</title>
 </head>
 <body>
-    <h1>Retrieve Student Data</h1>
+    <center><h1>Retrieve Student Data</h1>
     <input type="text" id="rollNo" placeholder="Enter Roll No" />
-    <button onclick="retrieveData()">Get Data</button>
+    <button onclick="retrieveData()">Get Data</button></center>
     <div id="result"></div>
 
     <script>
@@ -31,15 +31,15 @@
                         <table border="5">
 			<tr>
    			<td><h2>Roll No: ${dataArray[0]}</h2></td>
-                        <td><p>Name: ${dataArray[1]}</p></td>
-                        <td><p>Class: ${dataArray[2]}</p>
-                        <td><p>Year: ${dataArray[3]}</p>
+                        <td>Name: ${dataArray[1]}</td>
+                        <td>Class: ${dataArray[2]}</td>
+                        <td>Year: ${dataArray[3]}</td>
                         </tr>
 			<tr>
-			<td><p>Subject 1: ${dataArray[4]}</p>
-			<td><p>Subject 2: ${dataArray[5]}</p>
-			<td><p>Subject 3: ${dataArray[6]}</p>
-		        <td><p>Subject 4: ${dataArray[7]}</p>
+			<td>Subject 1: <td>${dataArray[4]}<br>
+			<td>Subject 2: <td>${dataArray[5]}<br>
+			<td>Subject 3: <td>${dataArray[6]}<br>
+		        <td>Subject 4: <td>${dataArray[7]}<br>
         		</tr>            
 		    </table>`;
                 } else {
