@@ -1,4 +1,4 @@
-<!--let studentData = [];
+let studentData = [];
 
 document.getElementById('fileInput').addEventListener('change', handleFile, false);
 
@@ -36,13 +36,13 @@ function generateMarksheet() {
         resultDiv.innerHTML = '<p>No data found for this roll number.</p>';
     }
 }
--->
 
 
 
 
 
 
+<!--
 let studentData = [];
 
 // Load the Excel file when the page loads
@@ -76,4 +76,4 @@ function generateMarksheet() {
     } else {
         resultDiv.innerHTML = '<p>No data found for this roll number.</p>';
     }
-}
+}-->
