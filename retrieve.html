@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retrieve Student Data</title>
+<style>
+	td {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+</style>
 </head>
 <body>
     <center><h1>AIMS RESULT</h1>
@@ -28,9 +36,9 @@
                 if (studentData) {
                     const dataArray = studentData.split('\t');
                     resultDiv.innerHTML = `
-                        <TABLE BORDER="5">
+                      <center>  <TABLE BORDER="5">
 <TR>
-	<TD>STUDENT NAME: </TD> <TD> ${dataArray[0]}</TD>
+	<td>STUDENT NAME: </td> <td> ${dataArray[0]}</td>
 	<TD>FATHER'S NAME: </TD> <TD> ${dataArray[1]}</TD>
 </TR>
 <TR>
