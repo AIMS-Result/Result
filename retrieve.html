@@ -36,20 +36,20 @@
                 if (studentData) {
                     const dataArray = studentData.split('\t');
                     resultDiv.innerHTML = `
-                      <center>  <TABLE BORDER="5">
+                      <center>  <TABLE BORDER="3">
 <TR>
-	<td>STUDENT NAME: </td> <td> ${dataArray[0]}</td>
-	<TD>FATHER'S NAME: </TD> <TD> ${dataArray[1]}</TD>
+	<td>Roll No. </td> <td> ${dataArray[0]}</td>
+	<TD>FATHER'S NAME: </TD> <TD> ${dataArray[2]}</TD>
 </TR>
 <TR>
-	<TD>ROLL NO.: </TD> <TD> ${dataArray[2]}</TD>
+	<TD>STUDENT NAME: </TD> <TD> ${dataArray[1]}</TD>
 	<TD>CLASS: </TD> <TD> ${dataArray[3]}</TD>
 </TR>
 <TR>
 	<TD> </TD> <TD> </TD>
 	<TD> </TD> <TD> </TD>
 </TR>
-<TR>
+<TR BGCOLOR="GREY">
 	<TD>SUBJECT </TD> <TD> TOTAL MARKS </TD> <TD> MARKS OBTAINED </TD>
 </TR>
 <TR>
