@@ -27,7 +27,8 @@
 	
 
     <input type="text" id="rollNo" placeholder="Enter Roll No" />
-    <button onclick="retrieveData()">RESULT</button></center><br><br>
+    <button onclick="retrieveData()">RESULT</button>
+	<h6>Roll no. are Case-Sensitive</h6></center><br><br>
     <div id="result"></div>
 
     <script>
@@ -91,10 +92,11 @@
 	<TD>${dataArray[30]} </TD> <TD> ${dataArray[21]} </TD> <TD> ${dataArray[31]} </TD> <TD> ${dataArray[32]}  </TD>
 </TR>
 </TABLE>
-<h3> RESULT : ${dataArray[33]} </h3>
+<h3> RESULT : ${dataArray[33]} </h3></center><br><br>
+<h5> NOTE : IF YOU HAVE 'ATKT' IN 3 OR MORE SUBJECTS, YOU ARE FAIL </h5>
 `;
                 } else {
-                    resultDiv.innerHTML = '<p>No data found for this roll number.</p>';
+                    resultDiv.innerHTML = '<center><h3><p>No data found for this roll number.<br> ROLL NO. ARE CASE-SENSITIVE </h3></center></p>';
                 }
             } catch (error) {
                 console.error('Error fetching the text file:', error);
