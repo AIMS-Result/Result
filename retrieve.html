@@ -15,7 +15,7 @@
 </style>
 </head>
 <body>
-	
+	<table width="800">
 	<center>
 	<H1>ADARSH INSTITUTE OF MANAGEMENT AND SCIENCE</H1>
 	<H3>A.B. ROAD DHAMNOD, DHAR, M.P.(454552)</h3> 
@@ -27,7 +27,7 @@
 	
 
     <input type="text" id="rollNo" placeholder="Enter Roll No" />
-    <button onclick="retrieveData()">RESULT</button></center><br><br>
+    <button onclick="retrieveData()">RESULT</button></center></table><br><br>
     <div id="result"></div>
 
     <script>
@@ -47,7 +47,7 @@
                 if (studentData) {
                     const dataArray = studentData.split('\t');
                     resultDiv.innerHTML = `
-                      <center>  <TABLE BORDER="3" BGCOLOR="#F5DEB3">
+                      <center>  <TABLE BORDER="3" BGCOLOR="#F5DEB3" WIDTH="800">
 <TR>
 	<td>Roll No. </td> <td> ${dataArray[0]}</td>
 	<TD>FATHER'S NAME: </TD> <TD> ${dataArray[2]}</TD>
