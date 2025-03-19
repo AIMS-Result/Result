@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retrieve Student Data</title>
+    <title>PUT EXAM RESULT 2024-25</title>
 <style>
 	td { 
    text-align: center;		
@@ -15,7 +15,7 @@
 </style>
 </head>
 <body>
-	<FONT FAMILY="CAMBRIA">
+	
 	<center>
 	<H1>ADARSH INSTITUTE OF MANAGEMENT AND SCIENCE</H1>
 	<H3>A.B. ROAD DHAMNOD, DHAR, M.P.(454552)</h3> 
@@ -27,8 +27,7 @@
 	
 
     <input type="text" id="rollNo" placeholder="Enter Roll No" />
-    <button onclick="retrieveData()">RESULT</button>
-	<h6>Roll no. are Case-Sensitive</h6></center><br><br>
+    <button onclick="retrieveData()">RESULT</button></center><br><br>
     <div id="result"></div>
 
     <script>
@@ -92,8 +91,8 @@
 	<TD>${dataArray[30]} </TD> <TD> ${dataArray[21]} </TD> <TD> ${dataArray[31]} </TD> <TD> ${dataArray[32]}  </TD>
 </TR>
 </TABLE>
-<h3> RESULT : ${dataArray[33]} </h3></center><br><br>
-<h5> NOTE : IF YOU HAVE 'ATKT' IN 3 OR MORE SUBJECTS, YOU ARE FAIL </h5>
+<h4> RESULT : ${dataArray[33]} </h4></center><br><br>
+<h6> NOTE : IF YOU HAVE 'ATKT' IN 3 OR MORE SUBJECTS, YOU ARE FAIL </h6>
 `;
                 } else {
                     resultDiv.innerHTML = '<center><h3><p>No data found for this roll number.<br> ROLL NO. ARE CASE-SENSITIVE </h3></center></p>';
