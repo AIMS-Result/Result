@@ -48,7 +48,7 @@
                     const dataArray = studentData.split('\t');
                     resultDiv.innerHTML = `
                       <center>  <TABLE BORDER="3" BGCOLO="#F5DEB3" WIDTH="850">
-		     <tr><td colspan="4" style="padding-bottom:0px;">&nbsp &nbsp<IMG SRC="HEADING.png" WIDTH="830"></td></tr>
+		     <tr><td colspan="4" style="padding-bottom:0px; padding-left:25px;">&nbsp &nbsp<IMG SRC="HEADING.png" WIDTH="830"></td></tr>
 <TR>
 	<td>Roll No. </td> <td> ${dataArray[0]}</td>
 	<TD>FATHER'S NAME: </TD> <TD> ${dataArray[2]}</TD>
@@ -89,7 +89,7 @@
 </TR>
 </TABLE>
 <h3> RESULT : ${dataArray[33]} </h3><br>
-<h4> *NOTE : IF YOU HAVE 'ATKT' IN 3 OR MORE SUBJECTS THEN      YOU ARE 'FAIL'</h4></center>
+<h4> NOTE : IF YOU HAVE 'ATKT' IN 3 OR MORE SUBJECTS THEN      YOU ARE 'FAIL'</h4></center>
 `;
                 } else {
                     resultDiv.innerHTML = '<center><br><p>• INVALID ROLL NO.<br>• ROLL NO. ARE CASE-SENSITIVE (e.g. 2CSP20)</p></center>';
