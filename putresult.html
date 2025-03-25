@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result Page</title>
+    <style>
+        td { 
+            text-align: center;		
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="result"></div>
+
+    <script>
+        async function fetchData(rollNo) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // Clear previous results
+
+            try {
+                const response = await fetch('student_data.txt'); // Ensure this file is in the same directory
+                const text = await response.text();
+                const lines = text.split('\n');
+
+                // Find the line that matches the roll number
+                const studentData = lines.find(line => line.startsWith(rollNo + '\t'));
+
+                if (studentData) {
+                    const dataArray = studentData.split('\t');
+                    resultDiv.innerHTML = `
+                        <center>
+                            <table border="3" bgcolor="#F5DEB3" width="850">
+                                <tr>
+                                    <td>Roll No.</td> <td>${dataArray[0]}</td>
+                                    <td>FATHER'S NAME:</td> <td>${dataArray[2]}</td>
+                                </tr>
+                                <tr>
+                                    <td>STUDENT NAME:</td> <td>${dataArray[1]}</td>
+                                    <td>CLASS:</td> <td>${dataArray[3]}</td>
+                                </tr>
+                                <tr bgcolor="grey">
+                                    <td>SUBJECT</td> <td>TOTAL MARKS</td> <td>MARKS OBTAINED</td> <td>PASS / ATKT</td>
+                                </tr>
+                                <tr>
+                                    <td>${dataArray[4]}</td> <td>${dataArray[5]}</td> <td>${dataArray[6]}</td> <td>${dataArray[7]}</td>
+                                </tr>
+                                <tr>
+                                    <td>${dataArray[8]}</td> <td>${dataArray[5]}</td> <td>${dataArray[9]}</td> <td>${dataArray[10]}</td>
+                                </tr>
+                                <tr>
+                                    <td>${dataArray[11]}</td> <td>${dataArray[5]}</td> <td>${dataArray[12]}</td> <td>${dataArray[13]}</td>
+                                </tr>
+                                <tr>
+                                    <td>${dataArray[14]}</td> <td>${dataArray[5]}</td> <td>${dataArray[15]}</td> <td>${dataArray[16]}</td>
+                                </tr>
+                                <tr>
+                                    <td>${dataArray[17]}</td> <td>${dataArray[5]}</td> <td>${dataArray[18]}</td> <td>${dataArray[19]}</td>
+                                </tr>
+                                <tr>
+                                    <td>${dataArray[20]}</td> <td>${dataArray[21]}</td> <td>${dataArray[22]}</td> <td>${dataArray[23]}</td>
+                                </tr>
+                                <tr>
+                                    <td>${dataArray[24]}</td> <td>${dataArray[21]}</td> <td>${dataArray[25]}</td> <td>${dataArray[26]}</td>
+                                </tr>
+                                <tr>
+                                    <td>${dataArray[27]}</td> <td>${dataArray[21]}</td> <td>${dataArray[28]}</td> <td>${dataArray[29]}</td>
+                                </tr>
+                                <tr>
+                                    <td>${dataArray[30]}</td> <td>${dataArray[21]}</td> <td>${dataArray[31]}</td> <td>${dataArray[32]}</td>
+                                </tr>
+                            </table>
+                            <h5>RESULT: ${dataArray[33]}</h5>
+                        </center>
+                        <br><br>
+                        <h6>*NOTE: IF YOU HAVE 'ATKT' IN 3 OR MORE SUBJECTS THEN YOU ARE 'FAIL'</h6>
+                    `;
+                } else {
+                    resultDiv.innerHTML = '<center><h5>• INVALID ROLL NO.<br><br>•ROLL NO. ARE CASE-SENSITIVE (e.g. 2CSP20)</h5></center>';
+                }
+            } catch (error) {
+                console.error('Error fetching the text file:', error);
+                resultDiv.innerHTML = '<p>Error retrieving data.</p>';
+            }
+        }
+
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const rollNo = urlParams.get('rollNo');
+            if (rollNo) {
+                fetchData(rollNo);
+            }
+        };
+    </script>
+</body>
+<body>
+    <div id="result"></div>
+    <button onclick="printResults()">Print</button>
+    <button onclick="downloadResults()">Download</button>
+
+    <script>
+        // Existing fetchData function...
+
+        function printResults() {
+            window.print();
+        }
+
+        function downloadResults() {
+            const resultDiv = document.getElementById('result');
+            const data = resultDiv.innerHTML; // Get the HTML content
+
+            // Create a Blob from the data
+            const blob = new Blob([data], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+
+            // Create a link element
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'result.html'; // Set the file name
+
+            // Append to the body and trigger download
+            document.body.appendChild(a);
+            a.click();
+
+            // Clean up
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Existing window.onload function...
+    </script>
+</body>
+</html>
