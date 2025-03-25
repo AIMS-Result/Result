@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PUT EXAM RESULT 2024-25</title>
+    <style>
+        td { 
+            text-align: center;		
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <table width="700">
+        <center>
+            <br>
+            <h1>ADARSH INSTITUTE OF MANAGEMENT & SCIENCE</h1>
+            <h4>A.B. ROAD DHAMNOD, DHAR, M.P.(454552)</h4> 
+            <h4>(NACC Accredited "B" Grade College)</h4>
+            <h4>(Run By Jankidevi Patidar Shikshan Samiti)</h4>
+            <br>
+            <img src="download.jpg" width="150" height="180"> &nbsp; 
+            <img src="DAVVLOGOF.png" width="150" height="180"> &nbsp; 
+            <img src="NACCLOGO.png" width="150" height="180">	
+            <br><br>
+            <h2>PUT EXAM RESULT 2024-25</h2>
+            <br>
+            <input type="text" id="rollNo" placeholder="Enter Roll No" />
+            <button onclick="navigateToResultPage()">RESULT</button>
+        </center>
+    </table>
+    <br><br>
+</body>
+<script>
+    function navigateToResultPage() {
+        const rollNo = document.getElementById('rollNo').value;
+        // Redirect to the result page with the roll number as a query parameter
+        window.location.href = `putresult.html?rollNo=${encodeURIComponent(rollNo)}`;
+    }
+</script>
+</html>
