@@ -28,9 +28,11 @@
 
                 if (studentData) {
                     const dataArray = studentData.split('\t');
-                    resultDiv.innerHTML = `
+                    resultDiv.innerHTML = `<br><br>
                         <center>
-                            <table border="3" bgcolor="#F5DEB3" width="850">
+                            <table border="3" bgcolorn="#F5DEB3" width="850">
+                            <tr><td colspan="4" style="padding-bottom:0px; padding-left:25px; padding-right:16px;">&nbsp &nbsp<IMG SRC="HEADING.png" WIDTH="830"></td></tr>
+
                                 <tr>
                                     <td>Roll No.</td> <td>${dataArray[0]}</td>
                                     <td>FATHER'S NAME:</td> <td>${dataArray[2]}</td>
@@ -70,10 +72,10 @@
                                     <td>${dataArray[30]}</td> <td>${dataArray[21]}</td> <td>${dataArray[31]}</td> <td>${dataArray[32]}</td>
                                 </tr>
                             </table>
-                            <h5>RESULT: ${dataArray[33]}</h5>
-                        </center>
-                        <br><br>
-                        <h6>*NOTE: IF YOU HAVE 'ATKT' IN 3 OR MORE SUBJECTS THEN YOU ARE 'FAIL'</h6>
+                            <h3>RESULT: ${dataArray[33]}</h3>
+                        
+                        <br>
+                        <h4>NOTE: IF YOU HAVE 'ATKT' IN 3 OR MORE SUBJECTS THEN YOU ARE 'FAIL'</h4></center>
                     `;
                 } else {
                     resultDiv.innerHTML = '<center><h5>• INVALID ROLL NO.<br><br>•ROLL NO. ARE CASE-SENSITIVE (e.g. 2CSP20)</h5></center>';
@@ -94,9 +96,9 @@
     </script>
 </body>
 <body>
-    <div id="result"></div>
+    <div id="result"></div><br><center>
     <button onclick="printResults()">Print</button>
-    <button onclick="downloadResults()">Download</button>
+    <button onclick="downloadResults()">Download</button></center>
 
     <script>
         // Existing fetchData function...
